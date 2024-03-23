@@ -76,7 +76,7 @@ it("Numbers", () => {
 
   expect(number).to.be.equal(4)
   expect(number).to.be.above(3) //Esse numero é acima de 3
-  expect(number).to.be.below(7) //esse numero é acima de 7
+  expect(number).to.be.below(7) //esse numero é abaixo de 7
   expect(floatNumber).to.be.equal(5.2123)
   expect(floatNumber).to.be.closeTo(5.2, 0.1) // procurar numero proximo
   expect(floatNumber).to.be.above(5) //verifica se esta acima de 5
