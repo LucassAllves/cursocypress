@@ -10,7 +10,7 @@ describe("Cypress basics", () => {
     cy.title().should("be.equal", "Campo de Treinamento") // usamos o Should para fazer o cypress encontrar no tempo que for necessario
     cy.title().should("contain", "Campo")
 
-    cy.title()
+    cy.title().debug()
       .should("be.equal", "Campo de Treinamento")
       .and("contain", "Campo") // essa é uma forma de faze, colocando o and no lugar do should
 
