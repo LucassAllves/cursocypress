@@ -1,32 +1,32 @@
-it("nada agora", function() { })
-// essa é uma das formas de trabalhar com arrow(Flecha)
-//function soma(a, b){
-//    return a + b
-//}
-//
-//console.log (soma(3, 2))
+describe("Arrow Function", () => {
+  it("nada agora", function () {});
+  // essa é uma das formas de trabalhar com arrow(Flecha)
+  function soma(a, b) {
+    return a + b;
+  }
 
-// Essa é mais uma forma de flechar uma function
-//const soma = function (a, b){
-// return a + b
-//}
-//
-//console.log (soma(3, 2))
+  console.log(soma(3, 2));
 
-//Essa é mais uma forma de exercitar a function
-//const soma = (a, b) => {
-//    return a + b
-//} 
-//
-//console.log (soma(1, 6))
+  // Essa é mais uma forma de flechar uma function
+  const soma1 = function (a, b) {
+    return a + b;
+  };
 
+  console.log(soma1(3, 2));
 
-const soma = () => 5 + 5 
+  // Essa é mais uma forma de exercitar a function
+  const soma3 = (a, b) => {
+    return a + b;
+  };
 
-console.log (soma(4 + 1)) 
+  console.log(soma3(1, 6));
 
-// essa é uma forma de você pegar o contexto.
-it ("a function test...", function(){
-    console.log("Function", this)
-})
+  const soma4 = () => 5 + 5;
 
+  console.log(soma4(4 + 1));
+
+  // essa é uma forma de você pegar o contexto.
+  it("a function test...", function () {
+    console.log("Function", this);
+  });
+});
