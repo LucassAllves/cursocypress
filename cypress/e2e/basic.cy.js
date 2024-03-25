@@ -5,8 +5,8 @@ describe("Cypress basics", () => {
     cy.visit("https://www.wcaquino.me/cypress/componentes.html") // visitamos usando o cy.visit
     //const title = cy.title() esse nao pega o texto porque não esta assincrono
     // console.log(title) ou seja a aula de promises.
-    //cy.pause// serve para vc ir pausando o testes.
-    //.debug// Serve para ter mais detalhe sobre o testes e elementos.
+    //cy.pause// serve para vc ir pausando o teste.
+    //.debug// Serve para ter mais detalhe sobre o teste e elementos.
     cy.title().should("be.equal", "Campo de Treinamento") // usamos o Should para fazer o cypress encontrar no tempo que for necessario
     cy.title().should("contain", "Campo")
 
@@ -19,7 +19,7 @@ describe("Cypress basics", () => {
       // aqui eu posso colocar o should que finciona tbm no lugar do then.
       console.log(title)
 
-      cy.get("#formNome").type(title) //vou imprimir o testo que esta em title e colocar ele no campo mapeado.
+      cy.get("#formNome").type(title) //vou imprimir o texto que esta em title e colocar ele no campo mapeado.
 
       syncTitle = title
     }) //TODO imprimir o log no coonsole.
