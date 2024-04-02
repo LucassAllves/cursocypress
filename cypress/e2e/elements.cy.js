@@ -95,6 +95,6 @@ beforeEach(() => {
     cy.get("[data-testid=dataEsportes]")
       .invoke("val")
       .should("eql", ["natacao", "Corrida", "nada"]) // invocamos os metodo valor com arrey
-    //Todo validar a pçoes do combo multiplo
+    //Todo - validar a pçoes do combo multiplo
   });
 });
