@@ -8,7 +8,7 @@ describe("Descrevendo Popup", () => {
       expect(msg).to.be.equal("Click OK!");
     });
   });
-  
+
   it("Deve preencher Popup", () => {
     cy.visit("https://www.wcaquino.me/cypress/componentes.html "); // vamos fazer o visit.
     cy.window().then((win) => {
@@ -28,6 +28,7 @@ describe("Descrevendo Popup", () => {
         .should("have.prop", "href") // traçamos o caminho do valor do link
         .and("equal", "https://www.wcaquino.me/cypress/frame.html"); //validamos se realmente esta na pagina
     });
+
     it("Should acesso popup dinamically", () => {
       cy.contains("Popup2").then(($a) => {
         // pegamos o valor pelo nome
@@ -36,6 +37,7 @@ describe("Descrevendo Popup", () => {
         cy.get("#tfield").type("Funciona"); // pegamos o campo da pagina e escrevemos que funciona
       });
     });
+
     //deve forçar i link da mesma pagina
     it("Should force link on same page", () => {
       cy.contains("Popup2") // pegamos o link pelo valor do nome
