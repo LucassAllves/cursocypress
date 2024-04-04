@@ -51,6 +51,7 @@ describe('Should test at a functional level ', () => {
         
         })
     })
+
     it ('Should updata an account', () => {
        
         //cy.request({
@@ -112,8 +113,8 @@ describe('Should test at a functional level ', () => {
                 body: {
                     
                     conta_id: contaId, // passamos o metodo que criamos para e, vez do ai para ele pegar pelo nome e nao mais pelo ID.
-                    // vamos utilizar uma biblioteca dinamica para deixar a data dinamica. e ela ja esta imbutida no cypress.
-                    data_pagamento: dayjs().set('date', 1).format('DD/MM/YYYY'), //serve para acrecentarmos um dia ao pagameto da data que foi realizado.
+                    // vamos utilizar uma biblioteca para deixar a data dinamica.
+                    data_pagamento: dayjs().add(1, 'day').format('DD/MM/YYYY'), //serve para acrecentarmos um dia ao pagameto da data que foi realizado.
                     data_transacao: dayjs().format('DD/MM/YYYY'),// E aqui serve para computarmos o dia que foi realizado a transação. 
                     descricao: "Darc",
                     envolvido: "lu",
@@ -122,8 +123,6 @@ describe('Should test at a functional level ', () => {
                     valor: "125.00"
                 }
             }).as('response')
-            const dates = dayjs().add(1, 'day').format('DD/MM/YYYY')
-            console.log(dates)
         }) 
         cy.get('@response').its('status').should('be.equal', 201) //temos essas duas formas de validar 
     cy.get('@response').its('status').should('exist')  
