@@ -17,7 +17,7 @@ const locators = {
     CONTAS: {
         NOME: '[data-test=nome]',
         BTN_SALVAR: '.btn',
-        BTN_ALTERAR:":nth-child(1) > :nth-child(2) > .fa-edit"
+        BTN_ALTERAR:":nth-child(1) > :nth-child(2) > :nth-child(1) > .far" 
         //"//table//td[contains(.,'Conta')]/..//i[@class='far fa-edit']"
     },
 
@@ -34,7 +34,8 @@ const locators = {
     EXTRATO: {
         LISTA: '.list-group > li',
         BUSCA_ELEMENTOS: '.list-group > :nth-child(7)',
-        BTN_DELETE: ":nth-child(1) > .row > .col > .far",
+        BTN_DELETE: "[class='far fa-trash-alt']:eq(2)",
+    
         //"//span[contains(., 'Doc')]/following-sibling::small[contains(., '123')]",
     },
     
